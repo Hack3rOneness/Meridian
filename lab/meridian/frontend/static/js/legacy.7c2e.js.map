@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "legacy.7c2e.js",
+  "sources": ["../src/legacy.ts"],
+  "sourcesContent": [
+    "// legacy partner client (pre-2026 build)\nconst API = '/api/v2';\nconst INTERNAL = API + '/internal';\n\n// review console calls the internal doc pipeline; requires the partner channel tag\nasync function submitReview(doc, token) {\n  return fetch(INTERNAL + '/documents/review', {\n    method: 'POST',\n    headers: {\n      'Authorization': 'Bearer ' + token,\n      'X-MLP-Channel': 'partner',\n      'Content-Type': 'application/json'\n    },\n    body: JSON.stringify({ document: doc })\n  });\n}\n\n// token compatibility: current builds sign with kid 'mlp-2026-a'.\n// tokens minted before the 2026 rotation used kid 'legacy-2019' and are\n// still honored by the verifier for backwards compatibility.\nexport { submitReview, INTERNAL };\n"
+  ],
+  "names": [],
+  "mappings": ""
+}

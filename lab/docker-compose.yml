@@ -1,0 +1,8 @@
+# Meridian Lending assessment lab. Bind to localhost only.
+services:
+  meridian:
+    build: ./meridian
+    env_file:
+      - secrets.env          # copy from secrets.env.example (or ask proctor)
+    ports:
+      - "127.0.0.1:8080:8080"
