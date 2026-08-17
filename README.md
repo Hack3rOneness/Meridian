@@ -97,3 +97,4 @@ captured evidence (`MLP{...}` and/or recovered regulated values), business impac
 and specific remediation. Include an executive summary a non-technical CTO can act
 on, plus an attack-narrative section showing your reasoning — including the dead
 ends and decoys you ruled out. That narrative is where we learn the most about you.
+# Meridian
