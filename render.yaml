@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: meridian-security-lab
+    runtime: docker
+    repo: https://github.com
+    plan: free
+    dockerContext: lab/meridian
+    dockerfilePath: lab/meridian/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: MLP_SEED
+        value: "dev-seed-CHANGE-ME"
